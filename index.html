@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body>
+    <!-- Section 1: Image 1 -->
+    <section>
+        <img src="image1.jpg" alt="Section Image 1" style="width:100%;">
+    </section>
+
+    <!-- Section 2: Text -->
+    <section>
+        <p>Initiating the student registration process via the web portal by entering personal data into the system.</p>
+    </section>
+
+    <!-- Section 3: Table with Form -->
+    <section>
+        <h2>Please fill the form below and click submit</h2>
+        <form id="registrationForm">
+            <table>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="surname">Surname:</label></td>
+                    <td><input type="text" id="surname" name="surname" required></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="age" name="age" required></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City:</label></td>
+                    <td><input type="text" id="city" name="city" required></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+            </table>
+            <br>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </section>
+
+    <!-- Section 4: Image 2 -->
+    <section>
+        <img src="image2.jpg" alt="Section Image 2" style="width:100%;">
+    </section>
+
+    <!-- Section 5: Footer -->
+    <footer>
+        <div style="display: flex; justify-content: space-between;">
+            <div>elyassalehi.my.canva.site</div>
+            <div>Elyassalehi73@gmail.com</div>
+            <div>+90 533 865 18 37</div>
+        </div>
+        <br>
+        <p>About The Elyas Academy<br>
+        Here, we come together to discover new approaches to learning that are more participatory and interesting so that we can converse with people more easily and convey our attitude and thinking.</p>
+    </footer>
+
+    <!-- JavaScript to Handle Form Submission -->
+    <script>
+        function submitForm() {
+            // Gather the form data
+            const name = document.getElementById('name').value;
+            const surname = document.getElementById('surname').value;
+            const age = document.getElementById('age').value;
+            const city = document.getElementById('city').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+
+            // Prepare the email content
+            const emailBody = `
+                Name: ${name}
+                Surname: ${surname}
+                Age: ${age}
+                City: ${city}
+                Phone Number: ${phone}
+                Email: ${email}
+            `;
+
+            // Redirect to the email client with the prepared email content
+            window.location.href = `mailto:elyassalehi73@gmail.com?subject=Student Registration&body=${encodeURIComponent(emailBody)}`;
+        }
+    </script>
+</body>
+</html>
