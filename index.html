@@ -4,6 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Akzidenz-Grotesk', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Section 1: Image Hover Effect */
+        section img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section 2: Text Styling */
+        section:nth-of-type(2) p {
+            font-family: 'Ove', sans-serif;
+            font-size: 28px;
+            color: #333;
+        }
+
+        /* Section 3: Form Styling */
+        section:nth-of-type(3) h2 {
+            font-family: 'Akzidenz-Grotesk', sans-serif;
+            color: #cd2b2b;
+            font-size: 15px;
+        }
+
+        section:nth-of-type(3) table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        section:nth-of-type(3) table,
+        section:nth-of-type(3) table td {
+            border: 1px solid #ff9999;
+        }
+
+        section:nth-of-type(3) td {
+            padding: 8px;
+            color: black;
+            font-size: 11px;
+        }
+
+        section:nth-of-type(3) input[type="text"],
+        section:nth-of-type(3) input[type="number"],
+        section:nth-of-type(3) input[type="tel"],
+        section:nth-of-type(3) input[type="email"] {
+            width: 100%;
+            padding: 5px;
+            font-size: 11px;
+        }
+
+        /* Submit Button Styling */
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: white;
+            background-color: #333333; /* Dark near-black color */
+            border: none;
+            border-radius: 25px; /* Curved corners */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1a1a1a; /* Slightly lighter black */
+            transform: scale(1.05);
+        }
+
+        /* Section 5: Footer Styling */
+        footer div {
+            font-family: 'Akzidenz-Grotesk', sans-serif;
+            color: black;
+            font-size: 11px;
+        }
+
+        footer div::after {
+            content: "|";
+            margin: 0 10px;
+            color: black;
+        }
+
+        footer div:last-child::after {
+            content: "";
+            margin: 0;
+        }
+
+        footer p {
+            font-size: 11px;
+            color: white;
+            line-height: 1.5;
+        }
+
+        /* About Part */
+        footer p:nth-of-type(1) {
+            font-family: 'Ove', sans-serif;
+            font-size: 18px;
+            color: white;
+        }
+
+        footer p:nth-of-type(2) {
+            font-family: 'Akzidenz-Grotesk', sans-serif;
+            font-size: 11px;
+            color: white;
+        }
+
+        /* Background Color for About Section */
+        footer {
+            background-color: #cd2b2b;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <!-- Section 1: Image 1 -->
